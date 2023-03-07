@@ -11,7 +11,7 @@ import Combine
 class FixturesViewModel: ObservableObject {
     
     // MARK: - Inputs
-    let didTapOnAddToFavorites = PassthroughSubject<FixtureViewModel, Never>()
+    let didTapOnAddToFavorites = PassthroughSubject<FixtureModel, Never>()
     let didPullToRefresh = PassthroughSubject<Void, Never>()
     let didLoad = PassthroughSubject<Void, Never>()
     let didTapOnRetry = PassthroughSubject<Void, Never>()
@@ -19,7 +19,7 @@ class FixturesViewModel: ObservableObject {
     // MARK: - Outputs
     @Published var errorType: ErrorViewType = .noError
     @Published var state: ViewState = .loading
-    @Published var fixtures: [Date: [FixtureViewModel]] = [:]
+    @Published var fixtures: [Date: [FixtureModel]] = [:]
     @Published var favoriteMatches: Set<Int> = (UserDefaultsManager.favoriteMatchesIds ?? [])
     @Published var isShowingFavoritesOnly = false
     
@@ -83,8 +83,8 @@ class FixturesViewModel: ObservableObject {
         }
     }
     
-    private func createFixturesVMs(_ matches: [Match]) -> [FixtureViewModel] {
-        return matches.map { FixtureViewModel(match: $0) }
+    private func createFixturesVMs(_ matches: [Match]) -> [FixtureModel] {
+        return matches.map { FixtureModel(match: $0) }
     }
     
     // This private function is used to toggle the favorite state of a match.
@@ -92,7 +92,7 @@ class FixturesViewModel: ObservableObject {
     // If the match's id is already present in the favoriteMatches set, it removes it. Otherwise, it adds it.
     // It also toggles the isFavorite flag of the match.
     // Finally, it saves the updated favoriteMatches set to the user defaults using the UserDefaultsManager helper class.
-    private func toggleFavorite(for match: FixtureViewModel) {
+    private func toggleFavorite(for match: FixtureModel) {
         if favoriteMatches.contains(match.id) {
             favoriteMatches.remove(match.id)
         } else {
@@ -114,7 +114,7 @@ class FixturesViewModel: ObservableObject {
     // Finally, it sets the fixtures property to the groupedMatches dictionary.
     private func updateData(_ matches: [Match]) {
         let matchesVMs = self.createFixturesVMs(matches)
-        var groupedMatches = [Date: [FixtureViewModel]]()
+        var groupedMatches = [Date: [FixtureModel]]()
         for match in matchesVMs {
             if let date = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: match.utcDate)) {
                 var matchesForDate = groupedMatches[date] ?? []

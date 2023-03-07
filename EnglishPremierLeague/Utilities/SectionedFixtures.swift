@@ -10,5 +10,5 @@ import Foundation
 struct SectionedFixtures: Identifiable {
     let id = UUID()
     let title: String
-    let matches: [FixtureViewModel]
+    let matches: [FixtureModel]
 }

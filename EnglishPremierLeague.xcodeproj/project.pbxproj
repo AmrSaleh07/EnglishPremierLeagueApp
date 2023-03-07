@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C92133829B41CC1004F6743 /* EnglishPremierLeagueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C92133729B41CC1004F6743 /* EnglishPremierLeagueApp.swift */; };
-		0C92133A29B41CC1004F6743 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C92133929B41CC1004F6743 /* ContentView.swift */; };
+		0C92133A29B41CC1004F6743 /* FixturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C92133929B41CC1004F6743 /* FixturesView.swift */; };
 		0C92133C29B41CC3004F6743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C92133B29B41CC3004F6743 /* Assets.xcassets */; };
 		0C92133F29B41CC3004F6743 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C92133E29B41CC3004F6743 /* Preview Assets.xcassets */; };
 		0C92134729B41D79004F6743 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 0C92134629B41D79004F6743 /* CombineMoya */; };
@@ -16,7 +16,7 @@
 		0C92134B29B41D9D004F6743 /* FixturesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C92134A29B41D9D004F6743 /* FixturesUseCase.swift */; };
 		0C92134D29B41DBF004F6743 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C92134C29B41DBF004F6743 /* Entities.swift */; };
 		0C92134F29B41E4D004F6743 /* FixturesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C92134E29B41E4D004F6743 /* FixturesRepository.swift */; };
-		0C92135129B41EB1004F6743 /* FixtureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C92135029B41EB1004F6743 /* FixtureViewModel.swift */; };
+		0C92135129B41EB1004F6743 /* FixtureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C92135029B41EB1004F6743 /* FixtureModel.swift */; };
 		0C92135329B42164004F6743 /* FixturesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C92135229B42164004F6743 /* FixturesAPI.swift */; };
 		0C92135529B422E9004F6743 /* FixturesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C92135429B422E9004F6743 /* FixturesViewModel.swift */; };
 		0CBC13FB29B60CD9003718F2 /* NetworkImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBC13FA29B60CD9003718F2 /* NetworkImageView.swift */; };
@@ -37,13 +37,13 @@
 /* Begin PBXFileReference section */
 		0C92133429B41CC1004F6743 /* EnglishPremierLeague.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishPremierLeague.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C92133729B41CC1004F6743 /* EnglishPremierLeagueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishPremierLeagueApp.swift; sourceTree = "<group>"; };
-		0C92133929B41CC1004F6743 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0C92133929B41CC1004F6743 /* FixturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesView.swift; sourceTree = "<group>"; };
 		0C92133B29B41CC3004F6743 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C92133E29B41CC3004F6743 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0C92134A29B41D9D004F6743 /* FixturesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesUseCase.swift; sourceTree = "<group>"; };
 		0C92134C29B41DBF004F6743 /* Entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
 		0C92134E29B41E4D004F6743 /* FixturesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesRepository.swift; sourceTree = "<group>"; };
-		0C92135029B41EB1004F6743 /* FixtureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureViewModel.swift; sourceTree = "<group>"; };
+		0C92135029B41EB1004F6743 /* FixtureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureModel.swift; sourceTree = "<group>"; };
 		0C92135229B42164004F6743 /* FixturesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesAPI.swift; sourceTree = "<group>"; };
 		0C92135429B422E9004F6743 /* FixturesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesViewModel.swift; sourceTree = "<group>"; };
 		0CBC13FA29B60CD9003718F2 /* NetworkImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageView.swift; sourceTree = "<group>"; };
@@ -117,6 +117,7 @@
 		0CBC140629B6965F003718F2 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				0C92135029B41EB1004F6743 /* FixtureModel.swift */,
 				0C92134A29B41D9D004F6743 /* FixturesUseCase.swift */,
 			);
 			path = Domain;
@@ -150,9 +151,8 @@
 		0CBC140A29B6989C003718F2 /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
-				0C92133929B41CC1004F6743 /* ContentView.swift */,
-				0C92135029B41EB1004F6743 /* FixtureViewModel.swift */,
-				0C92135429B422E9004F6743 /* FixturesViewModel.swift */,
+				0CBC143629B74A38003718F2 /* Views */,
+				0CBC143729B74A5C003718F2 /* View Model */,
 			);
 			path = Fixtures;
 			sourceTree = "<group>";
@@ -160,7 +160,6 @@
 		0CBC140B29B698FA003718F2 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				0CBC140C29B69A02003718F2 /* MatchRowView.swift */,
 				0CBC140429B692CD003718F2 /* ErrorView.swift */,
 				0CBC13FA29B60CD9003718F2 /* NetworkImageView.swift */,
 				0CBC141629B6A64F003718F2 /* NoDataView.swift */,
@@ -174,6 +173,23 @@
 				0CBC141429B6A03B003718F2 /* KeychainManager.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		0CBC143629B74A38003718F2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0C92133929B41CC1004F6743 /* FixturesView.swift */,
+				0CBC140C29B69A02003718F2 /* MatchRowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0CBC143729B74A5C003718F2 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C92135429B422E9004F6743 /* FixturesViewModel.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,11 +274,11 @@
 				0CBC140329B69009003718F2 /* ErrorViewType.swift in Sources */,
 				0C92135529B422E9004F6743 /* FixturesViewModel.swift in Sources */,
 				0C92134B29B41D9D004F6743 /* FixturesUseCase.swift in Sources */,
-				0C92133A29B41CC1004F6743 /* ContentView.swift in Sources */,
+				0C92133A29B41CC1004F6743 /* FixturesView.swift in Sources */,
 				0CBC140F29B69A7A003718F2 /* Date+Extension.swift in Sources */,
 				0CBC141129B69AA4003718F2 /* ViewState.swift in Sources */,
 				0C92135329B42164004F6743 /* FixturesAPI.swift in Sources */,
-				0C92135129B41EB1004F6743 /* FixtureViewModel.swift in Sources */,
+				0C92135129B41EB1004F6743 /* FixtureModel.swift in Sources */,
 				0C92134F29B41E4D004F6743 /* FixturesRepository.swift in Sources */,
 				0CBC13FF29B67837003718F2 /* UserDefaultsManager.swift in Sources */,
 				0CBC140D29B69A02003718F2 /* MatchRowView.swift in Sources */,

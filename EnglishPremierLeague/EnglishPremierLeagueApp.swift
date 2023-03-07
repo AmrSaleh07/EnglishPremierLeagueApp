@@ -23,7 +23,7 @@ struct EnglishPremierLeagueApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: self.fixturesViewModel)
+            FixturesView(viewModel: self.fixturesViewModel)
         }
     }
 }

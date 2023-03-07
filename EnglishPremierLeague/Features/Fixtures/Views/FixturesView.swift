@@ -8,7 +8,7 @@
 import SwiftUI
 import Moya
 
-struct ContentView: View {
+struct FixturesView: View {
     @StateObject var viewModel: FixturesViewModel
     
     init(viewModel: FixturesViewModel) {
@@ -72,7 +72,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(viewModel: FixturesViewModel(
+        FixturesView(viewModel: FixturesViewModel(
             fixturesUseCase:
                 DefaultFetchFixturesUseCase(
                     fixturesRepository:

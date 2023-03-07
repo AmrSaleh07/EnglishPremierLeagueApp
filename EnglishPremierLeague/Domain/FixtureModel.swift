@@ -7,7 +7,7 @@
 
 import Foundation
 
-class FixtureViewModel: Identifiable {
+class FixtureModel: Identifiable {
     let id: Int
     let homeTeamName: String
     let homeTeamFlag: String

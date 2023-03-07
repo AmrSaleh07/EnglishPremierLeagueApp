@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct MatchRowView: View {
-    let match: FixtureViewModel
+    let match: FixtureModel
     let addToFavitouteAction: (() -> Void)
     
-    init(match: FixtureViewModel, addToFavitouteAction: @escaping () -> Void) {
+    init(match: FixtureModel, addToFavitouteAction: @escaping () -> Void) {
         self.match = match
         self.addToFavitouteAction = addToFavitouteAction
     }
