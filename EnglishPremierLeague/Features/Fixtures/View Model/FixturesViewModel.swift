@@ -83,7 +83,7 @@ class FixturesViewModel: ObservableObject {
         }
     }
     
-    private func createFixturesVMs(_ matches: [Match]) -> [FixtureModel] {
+    func createFixturesVMs(_ matches: [Match]) -> [FixtureModel] {
         return matches.map { FixtureModel(match: $0) }
     }
     
@@ -92,7 +92,7 @@ class FixturesViewModel: ObservableObject {
     // If the match's id is already present in the favoriteMatches set, it removes it. Otherwise, it adds it.
     // It also toggles the isFavorite flag of the match.
     // Finally, it saves the updated favoriteMatches set to the user defaults using the UserDefaultsManager helper class.
-    private func toggleFavorite(for match: FixtureModel) {
+    func toggleFavorite(for match: FixtureModel) {
         if favoriteMatches.contains(match.id) {
             favoriteMatches.remove(match.id)
         } else {
@@ -112,7 +112,7 @@ class FixturesViewModel: ObservableObject {
     // It then adds the match to the corresponding date's array of matches in the groupedMatches dictionary.
     // If the match is a favorite, it sets the isFavorite flag to true.
     // Finally, it sets the fixtures property to the groupedMatches dictionary.
-    private func updateData(_ matches: [Match]) {
+    func updateData(_ matches: [Match]) {
         let matchesVMs = self.createFixturesVMs(matches)
         var groupedMatches = [Date: [FixtureModel]]()
         for match in matchesVMs {

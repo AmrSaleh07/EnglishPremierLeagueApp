@@ -7,7 +7,8 @@
 
 import Foundation
 
-class FixtureModel: Identifiable {
+class FixtureModel: Identifiable, Equatable {
+    
     let id: Int
     let homeTeamName: String
     let homeTeamFlag: String
@@ -51,5 +52,9 @@ class FixtureModel: Identifiable {
         dateFormatter.timeStyle = .short
         dateFormatter.dateFormat = "HH:mm"
         date = dateFormatter.string(from: match.utcDate)
+    }
+    
+    static func == (lhs: FixtureModel, rhs: FixtureModel) -> Bool {
+        return lhs.id == rhs.id
     }
 }

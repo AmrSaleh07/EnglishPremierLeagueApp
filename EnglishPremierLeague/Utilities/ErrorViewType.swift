@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ErrorViewType {
+enum ErrorViewType: Error {
     case technicalError
     case connectionError
     
